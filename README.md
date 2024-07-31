@@ -1,1 +1,1 @@
-# Interview-Code-Challenge-for-Developer-StudentQR
+# Code-Challenge-for-Developer-StudentQR
