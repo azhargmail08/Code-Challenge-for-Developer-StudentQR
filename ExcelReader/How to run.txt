@@ -1,0 +1,2 @@
+1) Run app.py
+2) navigate in your browser this address http://127.0.0.1:5000

@@ -19,6 +19,7 @@ body {
 h1 {
     color: #333;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .template-link {
@@ -26,6 +27,7 @@ h1 {
     text-decoration: none;
     display: block;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .template-link:hover {
@@ -35,6 +37,9 @@ h1 {
 .file-input-container {
     position: relative;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #fileInput {
@@ -42,18 +47,32 @@ h1 {
 }
 
 .file-input-label {
-    display: inline-block;
-    width: 95%;
+    flex-grow: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
     color: #555;
     background-color: #f9f9f9;
+    text-align: center;
 }
 
 .file-input-label:hover {
     background-color: #f1f1f1;
+}
+
+.browse-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    margin-left: 10px;
+}
+
+.browse-btn:hover {
+    background-color: #0056b3;
 }
 
 .file-name {
@@ -61,6 +80,7 @@ h1 {
     margin-top: 10px;
     font-style: italic;
     color: #666;
+    text-align: center;
 }
 
 .button-container {
@@ -77,7 +97,7 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
-    width: 40%;
+    width: 45%;
 }
 
 .upload-btn {

@@ -14,8 +14,10 @@
         <a href="#" class="template-link">Download Excel Template</a>
         <form id="uploadForm">
             <div class="file-input-container">
-                <input type="file" id="fileInput" required>
-                <label for="fileInput" class="file-input-label">Choose file</label>
+                <label id="fileLabel" for="fileInput">Choose file</label>
+                <input type="file" id="fileInput" style="display: none;" required>
+                <button type="button" id="browseButton"
+                    onclick="document.getElementById('fileInput').click();">Browse</button>
                 <span id="fileName" class="file-name"></span>
             </div>
             <div class="button-container">

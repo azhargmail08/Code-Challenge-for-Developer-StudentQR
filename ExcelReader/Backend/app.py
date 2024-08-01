@@ -36,7 +36,7 @@ def add_student_record(name, class_name, level, contact):
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
-        return jsonify({'error': 'No file part in the request'}), 400
+        return jsonify({'error': 'Please select an Excel file'}), 400
     
     file = request.files['file']
     if file.filename == '':
