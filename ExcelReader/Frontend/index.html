@@ -4,18 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student QR</title>
+    <title>Student Records Uploader</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Upload Data</h1>
-    <form id="uploadForm">
-        <input type="file" id="fileInput" required>
-        <button type="button" onclick="uploadFile()">Upload</button>
-        <button type="button" onclick="resetForm()">Cancel</button>
-    </form>
-    <div id="result"></div>
+    <div class="container">
+        <h1>Upload from file</h1>
+        <a href="#" class="template-link">Download Excel Template</a>
+        <form id="uploadForm">
+            <div class="file-input-container">
+                <input type="file" id="fileInput" required>
+                <label for="fileInput" class="file-input-label">Choose file</label>
+                <span id="fileName" class="file-name"></span>
+            </div>
+            <div class="button-container">
+                <button type="button" class="upload-btn" onclick="uploadFile()">Upload</button>
+                <button type="button" class="cancel-btn" onclick="resetForm()">Cancel</button>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 

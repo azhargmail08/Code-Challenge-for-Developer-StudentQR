@@ -1,3 +1,9 @@
+document.getElementById('fileInput').addEventListener('change', function () {
+    const fileInput = document.getElementById('fileInput');
+    const fileNameSpan = document.getElementById('fileName');
+    fileNameSpan.textContent = fileInput.files[0].name;
+});
+
 function uploadFile() {
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
@@ -13,7 +19,7 @@ function uploadFile() {
             if (data.error) {
                 alert(data.error);
             } else {
-                displayResult(data);
+                appendResult(data);
             }
         })
         .catch(error => {
@@ -21,7 +27,7 @@ function uploadFile() {
         });
 }
 
-function displayResult(data) {
+function appendResult(data) {
     const resultDiv = document.getElementById('result');
     if (data.length > 0) {
         let table = '<table><thead><tr><th>Name</th><th>Class</th><th>Level</th><th>Parent Contact</th></tr></thead><tbody>';
@@ -34,13 +40,13 @@ function displayResult(data) {
             </tr>`;
         });
         table += '</tbody></table>';
-        resultDiv.innerHTML = table;
+        resultDiv.innerHTML += table; // Append the new table to the existing content
     } else {
-        resultDiv.innerHTML = '<p>No new records added.</p>';
+        alert('No new records added.'); // Display an alert instead of appending the message
     }
 }
 
 function resetForm() {
     document.getElementById('uploadForm').reset();
-    document.getElementById('result').innerHTML = '';
+    document.getElementById('fileName').textContent = '';
 }
